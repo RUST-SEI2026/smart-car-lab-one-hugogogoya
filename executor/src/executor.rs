@@ -19,6 +19,7 @@ impl Executor {
         for cmd in cmds.chars() {
             match cmd {
                 'B' => self.state.be_reverse(),
+                'F' => self.state.be_fast(),
                 _ => {
                     let actions = self.state.assemble(cmd);
                     for action in actions {
